@@ -44,14 +44,14 @@ Anotamos la direcciones IP del servidor:
 
 ![](images/Anotación&#32;2020-03-09&#32;164132.png)
 
-La dirección 10.0.2.4 corresponde a la red NAT y 192.168.56.12 a la red solo anfitrión.
+La dirección `10.0.2.4` corresponde a la red NAT y `192.168.56.12` a la red solo-anfitrión.
 
 Vemos como Apache funciona correctamente al acceder a la página a través de la IP `10.0.2.4`:
 
 ![](images/Anotación&#32;2020-03-09&#32;170629.png)
 
 
-## Configuración de la red NAT y modo solo anfitrión
+## Configuración de la red NAT y modo solo-anfitrión
 
 Después de hacer todos los pasos de la sección anterior, creamos otra máquina virtual con la misma configuración.
 
@@ -67,7 +67,7 @@ Por último, añadimos otro adaptador de red en cada máquina virtual y seleccio
 
 ![](images/Anotación&#32;2020-03-09&#32;163234.png)
 
-Para la configuración de la red solo anfitrión con `netplan`, he seguido la guía de este [enlace](https://askubuntu.com/questions/293816/in-virtualbox-how-do-i-set-up-host-only-virtual-machines-that-can-access-the-in/1013467#1013467).
+Para la configuración de la red solo-anfitrión con `netplan`, he seguido la guía de este [enlace](https://askubuntu.com/questions/293816/in-virtualbox-how-do-i-set-up-host-only-virtual-machines-that-can-access-the-in/1013467#1013467).
 
 
 ## Cuestiones a resolver
