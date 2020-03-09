@@ -83,7 +83,7 @@ Y accedemos con `curl` de una máquina a otra a las páginas que hemos creado an
 ![](images/Anotación&#32;2020-03-09&#32;171012.png)
 ![](images/Anotación&#32;2020-03-09&#32;170958.png)
 
-También podemos acceder desde el anfitrión desde el navegador:
+También podemos acceder desde el anfitrión con el navegador:
 
 ![](images/Anotación&#32;2020-03-09&#32;171154.png)
 ![](images/Anotación&#32;2020-03-09&#32;171131.png)
