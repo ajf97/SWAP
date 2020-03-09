@@ -28,7 +28,7 @@ $ sudo passwd root
 
 Comprobamos que Apache está instalado y ejecutándose:
 
-![](images/Anotación&#32;2020-02-18&#32;184222.png)
+![](images/Anotación&#32;2020-03-09&#32;185254.png)
 
 No es necesario instalar `curl` porque ya se encuentra instalado por defecto. A continuación, comprobamos si Apache funciona correctamente. Para ello creamos el siguiente código en `/var/www/html`:
 
@@ -42,26 +42,22 @@ Página de ejemplo para ajf97 en mv1
 
 Anotamos la direcciones IP del servidor:
 
-![](images/Anotación&#32;2020-03-09&#32;164132.png)
+![](images/Anotación&#32;2020-03-09&#32;184920.png)
 
-La dirección `10.0.2.4` corresponde a la red NAT y `192.168.56.12` a la red solo-anfitrión.
+La dirección `10.0.2.15` corresponde a la NAT y `192.168.56.12` a la red solo-anfitrión.
 
-Vemos como Apache funciona correctamente al acceder a la página a través de la IP `10.0.2.4`:
+Vemos como Apache funciona correctamente al acceder a la página a través de la IP `192.68.56.12`:
 
-![](images/Anotación&#32;2020-03-09&#32;170629.png)
+![](images/Anotación&#32;2020-03-09&#32;185131.png)
 
 
-## Configuración de la red NAT y modo solo-anfitrión
+## Configuración de redes.
 
 Después de hacer todos los pasos de la sección anterior, creamos otra máquina virtual con la misma configuración.
 
-Para crear una red NAT nos vamos a la configuración de virtualbox y creamos la red con la siguiente configuración:
+Creamos un adaptador NAT en la configuración de las máquinas virtuales:
 
-![](images/Anotación&#32;2020-02-18&#32;195751.png)
-
-Después nos vamos a la configuración específica de cada máquina virtual y cambiamos el adaptador de red a red NAT para cada una de las máquinas virtuales:
-
-![](images/Anotación&#32;2020-02-18&#32;193920.png)
+![](images/Anotación&#32;2020-03-09&#32;183644.png)
 
 Por último, añadimos otro adaptador de red en cada máquina virtual y seleccionamos el adaptador del anfitrión:
 
@@ -74,14 +70,13 @@ Para la configuración de la red solo-anfitrión con `netplan`, he seguido la gu
 
 Por último, accedemos por ssh de una máquina a otra:
 
-![](images/Anotación&#32;2020-02-18&#32;200608.png)
-
-![](images/Anotación&#32;2020-02-18&#32;200704.png)
+![](images/Anotación&#32;2020-03-09&#32;185427.png)
+![](images/Anotación&#32;2020-03-09&#32;185526.png)
 
 Y accedemos con `curl` de una máquina a otra a las páginas que hemos creado anteriormente:
 
-![](images/Anotación&#32;2020-03-09&#32;171012.png)
-![](images/Anotación&#32;2020-03-09&#32;170958.png)
+![](images/Anotación&#32;2020-03-09&#32;185843.png)
+![](images/Anotación&#32;2020-03-09&#32;185857.png)
 
 También podemos acceder desde el anfitrión con el navegador:
 
@@ -90,5 +85,5 @@ También podemos acceder desde el anfitrión con el navegador:
 
 Y mediante `ssh`:
 
-![](images/Anotación&#32;2020-03-09&#32;165318.png)
-![](images/Anotación&#32;2020-03-09&#32;165402.png)
+![](images/Anotación&#32;2020-03-09&#32;190018.png)
+![](images/Anotación&#32;2020-03-09&#32;190058.png)
